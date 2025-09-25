@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩票号码生成器 - 双色球 & 大乐透</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航栏 -->
+        <header class="header">
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-type="ssq">双色球</button>
+                <button class="tab-btn" data-type="dlt">大乐透</button>
+            </div>
+            <button class="refresh-btn" id="refreshBtn">🔄</button>
+        </header>
+
+        <!-- 号码展示区 -->
+        <main class="numbers-container">
+            <div class="number-card" id="numberCard">
+                <div class="card-title" id="cardTitle">双色球 - 5注号码</div>
+                <div class="all-numbers" id="allNumbers">
+                    <!-- 5注号码将通过 JavaScript 动态生成 -->
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部操作区 -->
+        <footer class="footer">
+            <div class="action-buttons">
+                <button class="btn btn-generate" id="generateBtn">再次生成</button>
+                <button class="btn btn-copy" id="copyBtn">复制结果</button>
+            </div>
+            <div class="copyright">
+                © 2025 My Lottery Project
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

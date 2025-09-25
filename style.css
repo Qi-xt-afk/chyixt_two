@@ -1,0 +1,367 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 顶部导航栏 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.tab-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.tab-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.tab-btn.active:hover {
+    color: white;
+}
+
+.refresh-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background: #5a6fd8;
+    transform: rotate(90deg);
+}
+
+/* 号码展示区 */
+.numbers-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.number-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 800px;
+}
+
+.number-card:hover {
+    transform: translateY(-5px);
+}
+
+.all-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.number-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.number-row:last-child {
+    border-bottom: none;
+}
+
+.row-label {
+    min-width: 60px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 双色球样式 */
+.ssq .red-ball {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.ssq .blue-ball {
+    background: linear-gradient(135deg, #4dabf7, #339af0);
+    box-shadow: 0 4px 8px rgba(77, 171, 247, 0.3);
+}
+
+/* 大乐透样式 */
+.dlt .front-ball {
+    background: linear-gradient(135deg, #ff8c42, #ff7b25);
+    box-shadow: 0 4px 8px rgba(255, 140, 66, 0.3);
+}
+
+.dlt .back-ball {
+    background: linear-gradient(135deg, #4dabf7, #339af0);
+    box-shadow: 0 4px 8px rgba(77, 171, 247, 0.3);
+}
+
+.separator {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    margin: 0 10px;
+}
+
+/* 底部操作区 */
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-generate {
+    background: #667eea;
+    color: white;
+}
+
+.btn-generate:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+.btn-copy {
+    background: #51cf66;
+    color: white;
+}
+
+.btn-copy:hover {
+    background: #40c057;
+    transform: translateY(-2px);
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-tabs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab-btn {
+        flex: 1;
+        max-width: 120px;
+    }
+
+    .number-card {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .number-row {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .row-label {
+        min-width: 50px;
+        font-size: 13px;
+    }
+
+    .number {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .number-card {
+        padding: 15px;
+        margin: 0 5px;
+    }
+
+    .number-row {
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .row-label {
+        min-width: 45px;
+        font-size: 12px;
+    }
+
+    .number {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .separator {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.number-card {
+    animation: fadeInUp 0.6s ease;
+}
+
+.number-card:nth-child(1) { animation-delay: 0.1s; }
+.number-card:nth-child(2) { animation-delay: 0.2s; }
+.number-card:nth-child(3) { animation-delay: 0.3s; }
+.number-card:nth-child(4) { animation-delay: 0.4s; }
+.number-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* 复制成功提示 */
+.copy-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(81, 207, 102, 0.95);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    z-index: 1000;
+    animation: showCopySuccess 2s ease;
+}
+
+@keyframes showCopySuccess {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+}
